@@ -55,10 +55,10 @@ column-gutter: 2em
 $
 J("p", "n") =
 
-&sum_(i=1)^N ("p"_i - y^"p"_i)^2 + sum_(i=1)^N ("n"_i - y^"n"_i)^2 + \
-&lambda_1 sum_(i=2)^(N-1) ("p"_(i+1) - 2 "p"_i + "p"_(i-1))^2 + \
-&lambda_2 sum_(i=2)^(N-1) ("n"_(i+1) - 2 "n"_i + "n"_(i-1))^2 
+&sum_(i=1)^N ||"p"_i - y^"p"_i||^2 + sum_(i=1)^N ||"n"_i - y^"n"_i||^2 + \
+&lambda_1 sum_(i=2)^(N-1) ||"p"_(i+1) - 2 "p"_i + "p"_(i-1)||^2 + \
+&lambda_2 sum_(i=2)^(N-1) ||"n"_(i+1) - 2 "n"_i + "n"_(i-1)||^2 
 $
 Why it is defined in this way is clearly explained in the project itself (in the `.ipynb` files).
 
-I did *not* yet started to implement *optimization methods*.
+I calculated the _gradient_ and the _hessian_ of the *cost function* but I did *not* yet started to implement *optimization methods*.
